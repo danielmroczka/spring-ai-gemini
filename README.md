@@ -9,16 +9,19 @@ This is a simple Spring Boot app that sends a user message to Google's Gemini mo
 ## Configure `GEMINI_API_KEY`
 Set your Gemini API key in an environment variable named `GEMINI_API_KEY` before starting the app.
 
-PowerShell (current terminal session):
+You can generate your API key at: [https://aistudio.google.com/api-keys](https://aistudio.google.com/api-keys)
 
-```powershell
-$env:GEMINI_API_KEY="your_api_key_here"
+Current terminal session:
+
+```bash
+export GEMINI_API_KEY="your_api_key_here"
 ```
 
-PowerShell (persist for your user profile; open a new terminal after this):
+Persist permanently (add to `~/.bashrc` or `~/.zshrc`):
 
-```powershell
-setx GEMINI_API_KEY "your_api_key_here"
+```bash
+echo 'export GEMINI_API_KEY="your_api_key_here"' >> ~/.bashrc
+source ~/.bashrc
 ```
 
 ## Where the app takes the key from
@@ -43,17 +46,17 @@ Prerequisites:
 
 Run the app with Gradle wrapper:
 
-```powershell
-.\gradlew.bat bootRun
+```bash
+./gradlew bootRun
 ```
 
 Call the endpoint from another terminal:
 
-```powershell
-Invoke-RestMethod -Method Get -Uri "http://localhost:8080/api/ask?message=Hello"
+```bash
+curl "http://localhost:8080/api/ask?message=Hello"
 ```
 
 Or in a browser:
 
-- `http://localhost:8080/api/ask?message=Hello`
+- [http://localhost:8080/api/ask?message=Hello](http://localhost:8080/api/ask?message=Hello)
 
