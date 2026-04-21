@@ -6,6 +6,10 @@ This is a simple Spring Boot app that sends a user message to Google's Gemini mo
 - API endpoint: `GET /api/ask?message=...`
 - Response shape: `{ "question": "...", "answer": "..." }`
 
+Useful links:
+- Spring AI: [https://spring.io/projects/spring-ai](https://spring.io/projects/spring-ai)
+- Gemini models: [https://ai.google.dev/gemini-api/docs/models](https://ai.google.dev/gemini-api/docs/models)
+
 ## Configure `GEMINI_API_KEY`
 Set your Gemini API key in an environment variable named `GEMINI_API_KEY` before starting the app.
 
@@ -59,4 +63,3 @@ curl "http://localhost:8080/api/ask?message=Hello"
 Or in a browser:
 
 - [http://localhost:8080/api/ask?message=Hello](http://localhost:8080/api/ask?message=Hello)
-
