@@ -1,9 +1,9 @@
 # Spring AI + Gemini Flash Demo
 
 ## Purpose
-This is a simple Spring Boot app that sends a user message to Google's Gemini model and returns the model response.
+This is a simple Spring Boot AI app that sends a user message to Google's Gemini model and returns the model response.
 
-- API endpoint: `GET /api/ask?message=...`
+- API endpoint: `GET /api/ask?message=Hello`
 - Response shape: `{ "question": "...", "answer": "..." }`
 
 Useful links:
@@ -57,7 +57,7 @@ Run the app with Gradle wrapper:
 Call the endpoint from another terminal:
 
 ```bash
-curl "http://localhost:8080/api/ask?message=Hello"
+curl http://localhost:8080/api/ask?message=Hello
 ```
 
 Or in a browser:
